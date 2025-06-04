@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #8B0000, #B30000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 340px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+h2 {
+    color: #b30000;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f8f8f8;
+}
+
+.checkbox {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #111;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: Impact, sans-serif;
+    text-transform: uppercase;
+}
+
+.decor {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.decor div {
+    width: 40px;
+    height: 6px;
+    margin-bottom: 6px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.decor div:nth-child(2) {
+    background: #111;
+}
+
+.link-login {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.link-login a {
+    color: #b30000;
+    text-decoration: none;
+}
+
+.link-login a:hover {
+    text-decoration: underline;
+}
