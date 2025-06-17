@@ -1,0 +1,119 @@
+/* public/css/categories-index.css */
+
+/* Wrapper for the categories index page */
+#categories-index-page {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  /* Page title */
+  #categories-index-page h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Add button */
+  #categories-index-page .add-category-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #48bb78;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  #categories-index-page .add-category-btn:hover {
+    background-color: #38a169;
+    transform: translateY(-2px);
+  }
+  
+  /* List styling */
+  #categories-index-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #categories-index-page ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7fafc;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid #48bb78;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  #categories-index-page ul li:hover {
+    background-color: #edf7ed;
+  }
+  #categories-index-page ul li a {
+    color: #2d3748;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
+  }
+  #categories-index-page ul li a:hover {
+    color: #48bb78;
+  }
+  
+  /* Actions */
+  #categories-index-page ul li .actions {
+    display: flex;
+    align-items: center;
+  }
+  #categories-index-page ul li .actions form {
+    display: inline;
+  }
+  
+  /* Messages */
+  #categories-index-page .bg-green-100 {
+    background-color: #f0fff4;
+    border-color: #9ae6b4;
+    color: #2f855a;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #categories-index-page {
+      background-color: #2d3748;
+      color: #e2e8f0;
+    }
+    #categories-index-page h1 {
+      color: #edf2f7;
+    }
+    #categories-index-page .add-category-btn {
+      background-color: #38a169;
+      color: #edf2f7;
+    }
+    #categories-index-page ul li {
+      background-color: #4a5568;
+      border-left-color: #48bb78;
+    }
+    #categories-index-page ul li:hover {
+      background-color: #2d3748;
+    }
+    #categories-index-page ul li a {
+      color: #e2e8f0;
+    }
+    #categories-index-page .bg-green-100 {
+      background-color: #22543d;
+      border-color: #38a169;
+      color: #c6f6d5;
+    }
+  }
+  

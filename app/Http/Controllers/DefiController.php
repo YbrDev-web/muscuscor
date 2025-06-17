@@ -22,16 +22,20 @@ class DefiController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nom' => 'required|string|max:255',
-            'niveau de difficulté' => 'required|string|max:255',
-            'Type de défi' => 'required|string|max:255',
+        $data = $request->validate([
+            'nom'               => 'required|string|max:255',
+            'niveau_difficulte' => 'required|string|max:255',
+            'type'              => 'required|string|max:255',
         ]);
-
-        Defi::create($request->all());
-
-        return redirect()->route('defis.index');
+    
+        Defi::create($data);
+    
+        return redirect()
+            ->route('defis.index')
+            ->with('success', 'Défi créé avec succès.');
     }
+    
+    
 
     public function show(Defi $defi)
     {

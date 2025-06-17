@@ -1,0 +1,97 @@
+/* public/css/defis-create.css */
+
+/* Wrapper pour la page d'ajout de défi */
+#defi-create-page {
+    max-width: 480px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Titre principal */
+  #defi-create-page h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form groups */
+  #defi-create-page form div {
+    margin-bottom: 1.25rem;
+  }
+  
+  #defi-create-page label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+  }
+  
+  #defi-create-page input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: border-color 0.2s ease;
+  }
+  
+  #defi-create-page input[type="text"]:focus {
+    outline: none;
+    border-color: #805ad5;
+    box-shadow: 0 0 0 3px rgba(128,90,213,0.3);
+  }
+  
+  /* Bouton de soumission */
+  #defi-create-page button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #805ad5;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  #defi-create-page button[type="submit"]:hover {
+    background-color: #6b46c1;
+    transform: translateY(-2px);
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #defi-create-page {
+      background-color: #374151;
+    }
+    #defi-create-page h1 {
+      color: #e5e7eb;
+    }
+    #defi-create-page label {
+      color: #9ca3af;
+    }
+    #defi-create-page input[type="text"] {
+      background-color: #4b5563;
+      border-color: #4b5563;
+      color: #e5e7eb;
+    }
+    #defi-create-page input[type="text"]:focus {
+      border-color: #a78bfa;
+      box-shadow: 0 0 0 3px rgba(167,139,250,0.3);
+    }
+    #defi-create-page button[type="submit"] {
+      background-color: #a78bfa;
+    }
+    #defi-create-page button[type="submit"]:hover {
+      background-color: #9f7aea;
+    }
+  }
+  

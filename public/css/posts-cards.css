@@ -1,0 +1,67 @@
+/* public/css/posts-cards.css */
+
+/* Transforme la table en grid de cartes */
+.cards-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  /* Masque l'entête de la table */
+  .cards-table thead {
+    display: none;
+  }
+  
+  /* Traite chaque ligne comme une carte */
+  .cards-table tbody {
+    display: contents;
+  }
+  .cards-table tr {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 1rem;
+  }
+  
+  /* Chaque cellule devient un bloc vertical */
+  .cards-table td {
+    display: block;
+    padding: 0.25rem 0;
+    color: #2d3748;
+  }
+  
+  /* Stylisation spécifique aux champs */
+  .cards-table td:nth-of-type(1)::before { content: "ID: "; font-weight: 600; }
+  .cards-table td:nth-of-type(2)::before { content: "Titre: "; font-weight: 600; }
+  .cards-table td:nth-of-type(3)::before { content: "Catégorie: "; font-weight: 600; }
+  
+  /* Actions en bas de la carte */
+  .cards-table td:nth-of-type(4) {
+    margin-top: 1rem;
+  }
+  .cards-table td:nth-of-type(4) a,
+  .cards-table td:nth-of-type(4) button {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Mode sombre */
+  @media (prefers-color-scheme: dark) {
+    .cards-table tr {
+      background-color: #2d3748;
+      border-color: #4a5568;
+    }
+    .cards-table td {
+      color: #e2e8eb;
+    }
+    .cards-table a {
+      color: #63b3ed;
+    }
+  }
+.flex{
+    gap: 10px;
+}  

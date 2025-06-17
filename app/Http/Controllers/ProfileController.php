@@ -57,10 +57,4 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-
-    public function profil()
-    {
-        $notifications = auth()->user()->notifications;
-        return view('profil', compact('notifications'));
-    }
 }

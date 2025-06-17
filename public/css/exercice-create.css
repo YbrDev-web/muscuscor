@@ -1,0 +1,95 @@
+/* public/css/exercice-create.css */
+
+/* Wrapper page création d'exercice */
+#exercice-create-page {
+    max-width: 500px;
+    margin:20px auto auto auto;
+    margin-bottom: 100px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Titre centré */
+  #exercice-create-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+  }
+  
+  /* Champs du formulaire */
+  #exercice-create-page .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  #exercice-create-page label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555555;
+  }
+  
+  #exercice-create-page input[type="text"],
+  #exercice-create-page textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: border-color 0.2s ease;
+  }
+  
+  #exercice-create-page input[type="text"]:focus,
+  #exercice-create-page textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49,130,206,0.3);
+  }
+  
+  /* Bouton d'envoi */
+  #exercice-create-page button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3182ce;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  #exercice-create-page button[type="submit"]:hover {
+    background-color: #275696;
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #exercice-create-page {
+      background: #2d3748;
+    }
+    #exercice-create-page h1 {
+      color: #edf2f7;
+    }
+    #exercice-create-page label {
+      color: #a0aec0;
+    }
+    #exercice-create-page input[type="text"],
+    #exercice-create-page textarea {
+      background: #4a5568;
+      border-color: #4a5568;
+      color: #edf2f7;
+    }
+    #exercice-create-page button[type="submit"] {
+      background-color: #5a67d8;
+    }
+    #exercice-create-page button[type="submit"]:hover {
+      background-color: #4c51bf;
+    }
+  }
+  

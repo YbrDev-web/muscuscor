@@ -5,10 +5,14 @@ use App\Http\Controllers\ExerciceController;
 use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\DefiController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CrudController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
+
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/defis', [DefiController::class, 'store'])->name('defis.store');
     Route::get('/defis/{defi}/show', [DefiController::class, 'show'])->name('defis.show');
     Route::post('/defis/{defi}/participer', [DefiController::class, 'participer'])->name('defis.participer');
+    Route::resource('posts', PostController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('crud', CrudController::class);
 });
 
 require __DIR__.'/auth.php';

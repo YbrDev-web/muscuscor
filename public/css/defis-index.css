@@ -1,0 +1,108 @@
+/* public/css/defis-index.css */
+
+/* Page wrapper */
+#defis-index-page {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Heading */
+  #defis-index-page h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Add button */
+  #defis-index-page .add-defi-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #4c51bf;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  #defis-index-page .add-defi-btn:hover {
+    background-color: #434190;
+    transform: translateY(-2px);
+  }
+  
+  /* List styling */
+  #defis-index-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #defis-index-page ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7fafc;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid #4c51bf;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  #defis-index-page ul li:hover {
+    background-color: #edf2f7;
+  }
+  #defis-index-page ul li a {
+    color: #2d3748;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  #defis-index-page ul li a:hover {
+    color: #4c51bf;
+  }
+  
+  /* Difficulty label */
+  #defis-index-page .niveau {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-left: 1rem;
+    white-space: nowrap;
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #defis-index-page {
+      background: #2d3748;
+      color: #e2e8f0;
+    }
+    #defis-index-page h1 {
+      color: #edf2f7;
+    }
+    #defis-index-page .add-defi-btn {
+      background-color: #5a67d8;
+      color: #edf2f7;
+    }
+    #defis-index-page .add-defi-btn:hover {
+      background-color: #434190;
+    }
+    #defis-index-page ul li {
+      background: #4a5568;
+      border-left-color: #5a67d8;
+    }
+    #defis-index-page ul li:hover {
+      background: #2d3748;
+    }
+    #defis-index-page ul li a {
+      color: #edf2f7;
+    }
+    #defis-index-page .niveau {
+      color: #a0aec0;
+    }
+  }
+  

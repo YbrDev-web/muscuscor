@@ -1,0 +1,75 @@
+/* public/css/exercice-index.css */
+
+/* Wrapper pour la page d'index des exercices */
+#exercice-index-page {
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Titre */
+  #exercice-index-page h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Bouton d'ajout */
+  #exercice-index-page .add-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #38a169;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  #exercice-index-page .add-btn:hover {
+    background-color: #2f855a;
+  }
+  
+  /* Liste des exercices */
+  #exercice-index-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #exercice-index-page ul li {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #exercice-index-page {
+      background: #2d3748;
+    }
+    #exercice-index-page h1 {
+      color: #edf2f7;
+    }
+    #exercice-index-page .add-btn {
+      background-color: #2f855a;
+      color: #e2e8f0;
+    }
+    #exercice-index-page .add-btn:hover {
+      background-color: #276749;
+    }
+    #exercice-index-page ul li {
+      background-color: #4a5568;
+      border-color: #718096;
+      color: #e2e8f0;
+    }
+  }
+  

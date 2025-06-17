@@ -8,15 +8,14 @@ class Defi extends Model
 {
     protected $fillable = [
         'nom',
-        'niveau de difficulté',
-        'Type de défi',
+        'niveau_difficulte',
+        'type',
     ];
 
     public function utilisateurs()
     {
         return $this->belongsToMany(User::class, 'defis_utilisateurs')
-        ->withPivot('statut')
-        ->withTimestamps();
+                    ->withPivot('statut')
+                    ->withTimestamps();
     }
-
 }

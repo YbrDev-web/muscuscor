@@ -1,0 +1,108 @@
+/* public/css/posts-create.css */
+
+/* Wrapper pour la page de création d'article */
+#post-create-page {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Titre de la page */
+  #post-create-page h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    text-align: center;
+  }
+  
+  /* Messages d'erreur */
+  #post-create-page .bg-red-100 {
+    background-color: #fff5f5;
+    border-color: #f56565;
+    color: #c53030;
+  }
+  
+  /* Formulaire */
+  #post-create-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Groupes de champs */
+  #post-create-page label {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.25rem;
+  }
+  
+  #post-create-page input[type="text"],
+  #post-create-page select,
+  #post-create-page textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: border-color 0.2s ease;
+  }
+  
+  #post-create-page input[type="text"]:focus,
+  #post-create-page select:focus,
+  #post-create-page textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66,153,225,0.3);
+  }
+  
+  /* Bouton d'enregistrement */
+  #post-create-page button[type="submit"] {
+    align-self: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #4299e1;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  #post-create-page button[type="submit"]:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #post-create-page {
+      background-color: #2d3748;
+    }
+    #post-create-page h1 {
+      color: #e2e8f0;
+    }
+    #post-create-page label {
+      color: #cbd5e0;
+    }
+    #post-create-page input[type="text"],
+    #post-create-page select,
+    #post-create-page textarea {
+      background-color: #4a5568;
+      border-color: #4a5568;
+      color: #e2e8e0;
+    }
+    #post-create-page button[type="submit"] {
+      background-color: #3182ce;
+    }
+    #post-create-page button[type="submit"]:hover {
+      background-color: #2b6cb0;
+    }
+  }
+  

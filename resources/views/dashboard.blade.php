@@ -13,6 +13,7 @@
         <div class="container">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-red-600 dark:text-red-400">Dashboard</h1>
+                @include('partials.menu')
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="logout-btn">
@@ -28,7 +29,7 @@
 
             <!-- Message de bienvenue -->
             <section class="news-section">
-                <p>👋 Bienvenue sur <strong>MuscuScore</strong> ! Vous êtes connecté.</p>
+                <p>👋 Bienvenue sur <strong>MuscuScore</strong> ! Vous êtes connecté <strong>{{ Auth::user()->name }}</strong>.</p>
             </section>
 
             <!-- Actualités sportives -->
@@ -39,7 +40,7 @@
                     <article class="news-item">
                         <h3>🎯 Paris 2024 : les JO approchent</h3>
                         <p>À moins de 100 jours des Jeux Olympiques, les athlètes français intensifient leurs préparations physiques et mentales...</p>
-                        <a href="#">Lire plus</a>
+                        <a href="{{ route('posts.index') }}">Lire plus</a>
                     </article>
 
                     <article class="news-item">

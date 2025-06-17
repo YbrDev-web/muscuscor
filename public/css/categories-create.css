@@ -1,0 +1,106 @@
+/* public/css/categories-create.css */
+
+/* Wrapper pour la page de création de catégorie */
+#category-create-page {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Titre de la page */
+  #category-create-page h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Formulaire */
+  #category-create-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Groupes de champs */
+  #category-create-page label {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  #category-create-page input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: border-color 0.2s ease;
+  }
+  
+  #category-create-page input[type="text"]:focus {
+    outline: none;
+    border-color: #48bb78;
+    box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.3);
+  }
+  
+  /* Bouton de soumission */
+  #category-create-page button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #48bb78;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  #category-create-page button[type="submit"]:hover {
+    background-color: #2f855a;
+    transform: translateY(-2px);
+  }
+  
+  /* Messages d'erreur */
+  #category-create-page .bg-red-100 {
+    background-color: #fff5f5;
+    border-color: #f56565;
+    color: #c53030;
+  }
+  
+  /* Mode sombre */
+  @media (prefers-color-scheme: dark) {
+    #category-create-page {
+      background-color: #2d3748;
+    }
+    #category-create-page h1 {
+      color: #edf2f7;
+    }
+    #category-create-page label {
+      color: #a0aec0;
+    }
+    #category-create-page input[type="text"] {
+      background-color: #4a5568;
+      border-color: #4a5568;
+      color: #edf2f7;
+    }
+    #category-create-page input[type="text"]:focus {
+      border-color: #48bb78;
+      box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.3);
+    }
+    #category-create-page button[type="submit"] {
+      background-color: #38a169;
+    }
+    #category-create-page button[type="submit"]:hover {
+      background-color: #2f855a;
+    }
+  }
+  
