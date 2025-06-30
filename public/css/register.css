@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #8B0000, #B30000);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #8b0000, #b30000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     padding: 2.5rem;
     border-radius: 8px;
     width: 340px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -68,6 +68,19 @@ button:hover {
     font-size: 1.8rem;
     font-family: Impact, sans-serif;
     text-transform: uppercase;
+}
+
+.nav {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+.nav a {
+    color: white;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .decor {

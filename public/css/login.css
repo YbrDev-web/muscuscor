@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #8B0000, #B30000);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #8b0000, #b30000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     padding: 2.5rem;
     border-radius: 8px;
     width: 320px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -29,7 +29,6 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #f8f8f8;
@@ -84,6 +83,19 @@ button:hover {
     text-transform: uppercase;
 }
 
+.nav {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+.nav a {
+    color: white;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .decor {
     position: absolute;
     top: 20px;
@@ -100,4 +112,17 @@ button:hover {
 
 .decor div:nth-child(2) {
     background: #111;
+}
+
+.error {
+    color: #b30000;
+    font-size: 0.9rem;
+    margin-block: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-block: 1rem;
 }

@@ -1,8 +1,12 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0d0d0d;
     color: #fff;
+}
+
+button {
+    cursor: pointer;
 }
 
 header {
@@ -30,7 +34,7 @@ nav a {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(to right, #b30000, #8B0000);
+    background: linear-gradient(to right, #b30000, #8b0000);
 }
 
 .hero h1 {
@@ -85,4 +89,3 @@ footer {
     text-align: center;
     color: #888;
 }
-

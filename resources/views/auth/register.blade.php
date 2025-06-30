@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 </head>
 <body>
-    <div class="logo">MUSCUSCORE</div>
 
-    <div class="decor">
-        <div></div>
-        <div></div>
-        <div style="width: 20px; margin-left: 20px;"></div>
-    </div>
+    <header>
+        <a href="{{ route('home') }}">
+            <div class="logo">MUSCUSCORE</div>
+        </a>
+        <nav class="nav">
+            <a href="{{ route('login') }}">Connexion</a>
+            <a href="{{ route('register') }}">Inscription</a>
+        </nav>
+        <div class="decor">
+            <div></div>
+            <div></div>
+            <div style="width: 20px; margin-left: 20px;"></div>
+        </div>
+    </header>
+
 
     <div class="register-container">
         <h2>INSCRIPTION</h2>
@@ -28,6 +37,16 @@
 
             <button type="submit">S'INSCRIRE</button>
         </form>
+
+        <div class="errors">
+            @if ($errors->any())
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @endif
+        </div>
 
         <div class="link-login">
             <span>Déjà un compte ? <a href="{{ route('login') }}">Se connecter</a></span>
