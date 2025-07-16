@@ -40,21 +40,22 @@
                     <article class="news-item">
                         <h2>🎯 Paris 2024 : les JO approchent</h2>
                         <p>À moins de 100 jours des Jeux Olympiques, les athlètes français intensifient leurs préparations physiques et mentales...</p>
-                        <a href="{{ route('posts.index') }}">Lire plus</a>
+                        <!-- <a href="{{ route('posts.index') }}">Lire plus</a> -->
                     </article>
 
                     <article class="news-item">
                         <h2>🏋️ Records battus en powerlifting</h2>
                         <p>Deux records du monde ont été battus ce week-end au championnat européen des -93kg hommes...</p>
-                        <a href="{{ route('posts.index') }}">Lire plus</a>
+                        <!-- <a href="{{ route('posts.index') }}">Lire plus</a> -->
                     </article>
 
                     <article class="news-item">
                         <h2>🚴 Tour de France 2025 : parcours dévoilé</h2>
                         <p>Le tracé officiel du Tour de France met à l’honneur les Alpes du Sud avec une arrivée inédite à Lyon...</p>
-                        <a href="{{ route('posts.index') }}">Lire plus</a>
+                        <!-- <a href="{{ route('posts.index') }}">Lire plus</a> -->
                     </article>
                 </div>
+                <button><a href="{{ route('posts.index') }}">Plus d'articles</a></button>
             </section>
 
         </div>
