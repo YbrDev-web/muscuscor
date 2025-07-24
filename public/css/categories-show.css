@@ -1,0 +1,134 @@
+/* public/css/categories-show.css */
+
+/* Wrapper for the category show page */
+#category-show-page {
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Category title */
+  #category-show-page h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Posts list heading */
+  #category-show-page h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Posts list */
+  #category-show-page ul {
+    list-style: disc inside;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+  }
+  #category-show-page ul li {
+    margin-bottom: 0.5rem;
+  }
+  #category-show-page ul li a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  #category-show-page ul li a:hover {
+    color: #2b6cb0;
+  }
+  
+  /* No posts message */
+  #category-show-page p {
+    color: #718096;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Action buttons container */
+  #category-show-page .actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  /* Buttons */
+  #category-show-page .actions a,
+  #category-show-page .actions button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  #category-show-page .actions a.bg-yellow-500,
+  #category-show-page .actions button.bg-yellow-500 {
+    background-color: #ecc94b;
+    color: #1a202c;
+  }
+  #category-show-page .actions a.bg-yellow-500:hover,
+  #category-show-page .actions button.bg-yellow-500:hover {
+    background-color: #d69e2e;
+    transform: translateY(-1px);
+  }
+  
+  #category-show-page .actions a.bg-red-500,
+  #category-show-page .actions button.bg-red-500 {
+    background-color: #f56565;
+    color: #ffffff;
+  }
+  #category-show-page .actions a.bg-red-500:hover,
+  #category-show-page .actions button.bg-red-500:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+  }
+  
+  #category-show-page .actions a.ml-auto {
+    margin-left: auto;
+    color: #3182ce;
+    align-self: center;
+  }
+  #category-show-page .actions a.ml-auto:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    #category-show-page {
+      background-color: #2d3748;
+      color: #e2e8f0;
+    }
+    #category-show-page h1,
+    #category-show-page h2 {
+      color: #edf2f7;
+    }
+    #category-show-page p {
+      color: #a0aec0;
+    }
+    #category-show-page ul li a {
+      color: #63b3ed;
+    }
+    #category-show-page ul li a:hover {
+      color: #4299e1;
+    }
+    #category-show-page .actions a.bg-yellow-500,
+    #category-show-page .actions button.bg-yellow-500 {
+      background-color: #d69e2e;
+      color: #1a202c;
+    }
+    #category-show-page .actions a.bg-red-500,
+    #category-show-page .actions button.bg-red-500 {
+      background-color: #e53e3e;
+    }
+  }
+  

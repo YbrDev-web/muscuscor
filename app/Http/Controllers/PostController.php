@@ -35,13 +35,17 @@ class PostController extends Controller
             'content'     => 'required|string',
             'category_id' => 'nullable|exists:categories,id',
         ]);
-
+    
+        // On ajoute l’ID de l’utilisateur connecté
+        $data['user_id'] = auth()->id();
+    
         Post::create($data);
-
+    
         return redirect()
             ->route('posts.index')
             ->with('success', 'Article créé avec succès.');
     }
+    
 
     /** Display the specified post. */
     public function show(Post $post)

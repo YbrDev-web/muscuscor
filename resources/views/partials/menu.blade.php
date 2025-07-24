@@ -10,6 +10,7 @@
         <a href="{{ route('crud.index') }}" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">CRUD Personnalisé</a>
         <a href="{{ route('exercices.index') }}" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Exercices</a>
         <a href="{{ route('defis.index') }}" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Défis</a>
+        <a href="{{ route('performances.index') }}" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Performances</a>
       </div>
     </div>
   </div>

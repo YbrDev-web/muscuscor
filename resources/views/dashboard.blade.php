@@ -12,7 +12,6 @@
     <header>
         <div class="container">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-red-600 dark:text-red-400">Dashboard</h1>
                 @include('partials.menu')
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -25,6 +24,9 @@
     </header>
 
     <main>
+
+    <h1 class="text-3xl font-bold text-red-600 dark:text-red-400">Dashboard</h1>
+    
         <div class="container">
 
             <!-- Message de bienvenue -->

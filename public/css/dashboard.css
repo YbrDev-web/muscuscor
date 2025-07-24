@@ -2,7 +2,7 @@
 
 /* Conteneur principal */
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -10,7 +10,7 @@
   
   /* Largeur fixe pour le header */
   .max-w-7xl {
-    max-width: 80rem; /* 1280px */
+    max-width: 100%; /* 1280px */
   }
   
   /* Utilitaires Flexbox */
@@ -122,56 +122,61 @@
       background-color: #7f1d1d;
     }
   }
-  /* Menu principal */
-nav {
-    background-color: #2d3748;    /* gray-800 */
-    max-width: 100%;
-  }
-  nav .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  nav .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 4rem;                /* 16 * 0.25rem */
-  }
-  
-  /* Liens du menu */
-  nav a {
-    color: #fff;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;     /* rounded-md */
-    font-size: 0.875rem;         /* text-sm */
-    font-weight: 500;            /* font-medium */
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
-  
-  /* Effet au survol */
-  nav a:hover {
-    background-color: #4a5568;   /* gray-700 */
-  }
-  
-  /* État actif (optionnel) */
-  nav a.active {
-    background-color: #2c5282;   /* blue-700, pour indiquer la page courante */
-  }
-  
-  /* Responsive (petits écrans) */
-  @media (max-width: 768px) {
-    nav .flex {
+
+  /* ========== Mobile Nav (≤768px) ========== */
+@media (max-width: 768px) {
+    /* 1) Empile le container flex du header */
+    header .container .flex {
       flex-direction: column;
-      height: auto;
+      align-items: stretch;
+    }
+  
+    /* 2) Chaque enfant prend toute la largeur et une petite marge */
+    header .container .flex > * {
+      width: 100%;
+      margin: 0.25rem 0;
+    }
+  
+    /* 3) Empile les liens de la nav à l’intérieur */
+    nav {
+      order: 1;               /* s’affiche en premier */
     }
     nav a {
-      display: block;
-      width: 100%;
+      display: block !important;
+      width: 100% !important;
       text-align: center;
+      padding: 0.75rem 0 !important;
+    }
+  
+    /* 4) L’utilisateur (dropdown) juste après */
+    .dropdown,
+    .dropdown-toggle {
+      order: 2;               /* juste après la nav */
+      display: block !important;
+      width: 100% !important;
+      text-align: center;
+      margin: 0.25rem 0;
+    }
+    .dropdown-menu {
+      position: static !important;
+      width: 100% !important;
+      box-shadow: none !important;
+      margin-top: 0 !important;
+    }
+  
+    /* 5) Le bouton logout en dernier */
+    form[action="{{ route('logout') }}"] {
+      order: 3;
+    }
+    .logout-btn {
+      display: block !important;
+      width: 100% !important;
+      text-align: center;
+      padding: 0.75rem 0 !important;
     }
   }
+  
+ 
 /* ===============================
    Stylisation pour posts.show
    =============================== */

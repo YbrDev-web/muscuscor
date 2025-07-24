@@ -1,0 +1,61 @@
+/* public/css/menu.css */
+
+/* Wrapper nav */
+nav {
+  width: 90%;
+}
+
+/* Container centré */
+nav .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flex parent */
+nav .flex {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+/* Groupe de liens */
+nav .flex .flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Style des liens */
+nav a {
+  color: #ffffff;            /* text-white */
+  padding: 0.5rem 0.75rem;    /* py-2 px-3 */
+  border-radius: 0.375rem;    /* rounded-md */
+  font-size: 0.875rem;        /* text-sm */
+  font-weight: 500;           /* font-medium */
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover */
+nav a:hover {
+  background-color: #4a5568; /* bg-gray-700 */
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  nav .flex {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+  nav .flex .flex {
+    flex-direction: column;
+  }
+  nav a {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+}

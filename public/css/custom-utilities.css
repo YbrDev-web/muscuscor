@@ -1,0 +1,45 @@
+/* resources/css/custom-utilities.css */
+
+/* 1) Surcharge de la classe sm:px-6 pour donner plus de marge */
+@media (min-width: 800px) {
+    .sm\:flex {
+      max-width: 90%;
+      padding-left: 2rem;   /* au lieu de 1.5rem */
+      padding-right: 2rem;
+    }
+    
+  }
+  
+  /* 2) Nouvelle classe sm:px-8 */
+  @media (min-width: 770px) {
+    .sm\:px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 90%;
+    }
+  }
+  
+  /* 3) Nouvelle classe md:py-8 pour du padding vertical moyen */
+  @media (min-width: 768px) {
+    .md\:py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+  
+  /* 4) Nouveau badge utility pour souligner un élément en lg */
+  @media (min-width: 1024px) {
+    .lg\:border-accent {
+      border-color: #5a67d8; /* exemple de couleur accent */
+    }
+  }
+  
+  /* 5) Utile pour forcer tous les liens du nav à full-width sur xs */
+  @media (max-width: 639px) {
+    nav a {
+      display: block !important;
+      width: 100% !important;
+      padding: 0.75rem 1rem !important;
+    }
+  }
+  
