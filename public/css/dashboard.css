@@ -1,338 +1,189 @@
-/* public/css/dashboard.css */
+/* ======================
+   VARIABLES GLOBALES
+========================= */
+:root {
+  --primary-red: #dc2626;
+  --primary-red-hover: #b91c1c;
+  --dark-bg: #1f2937;
+  --light-bg: #ffffff;
+  --gray-text: #4a5568;
+  --accent-blue: #1d4ed8;
+}
 
-/* Conteneur principal */
-.container {
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  /* Largeur fixe pour le header */
-  .max-w-7xl {
-    max-width: 100%; /* 1280px */
-  }
-  
-  /* Utilitaires Flexbox */
-  .flex {
-    display: flex;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
-  .items-center {
-    align-items: center;
-  }
-  
-  /* Titres */
-  .text-3xl {
-    font-size: 1.875rem; /* 30px */
-    line-height: 2.25rem; /* 36px */
-  }
-  .font-bold {
-    font-weight: 700;
-  }
-  
-  /* Couleurs */
-  .text-red-600 {
-    color: #dc2626;
-  }
-  
-  /* Dark mode pour le titre */
-  html.dark .text-red-400,
-  .dark .text-red-400 {
-    color: #f87171;
-  }
-  
-  /* Bouton de déconnexion */
-  .logout-btn {
-    background-color: #dc2626;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  .logout-btn:hover {
-    background-color: #b91c1c;
-  }
-  
-  /* Sections d'actualités */
-  .news-section {
-    margin-bottom: 2rem;
-  }
-  .news-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  /* Liste des articles d'actualités */
-  .news-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-  .news-item {
-    background-color: #fff;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-  }
-  .news-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  .news-item p {
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    color: #4a5568;
-  }
-  .news-item a {
-    align-self: flex-start;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-  .news-item a:hover {
-    color: #1d4ed8;
-  }
-  
-  /* Dark mode global */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #1f2937; /* gray-800 */
-      color: #e5e7eb;          /* gray-200 */
-    }
-    .news-item {
-      background-color: #374151; /* gray-700 */
-      box-shadow: none;
-    }
-    .news-item p {
-      color: #d1d5db;
-    }
-    .logout-btn {
-      background-color: #991b1b;
-    }
-    .logout-btn:hover {
-      background-color: #7f1d1d;
-    }
-  }
+/* ======================
+   RESET DE BASE
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-bg);
+  color: var(--light-bg);
+}
 
-  /* ========== Mobile Nav (≤768px) ========== */
-@media (max-width: 768px) {
-    /* 1) Empile le container flex du header */
-    header .container .flex {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    /* 2) Chaque enfant prend toute la largeur et une petite marge */
-    header .container .flex > * {
-      width: 100%;
-      margin: 0.25rem 0;
-    }
-  
-    /* 3) Empile les liens de la nav à l’intérieur */
-    nav {
-      order: 1;               /* s’affiche en premier */
-    }
-    nav a {
-      display: block !important;
-      width: 100% !important;
-      text-align: center;
-      padding: 0.75rem 0 !important;
-    }
-  
-    /* 4) L’utilisateur (dropdown) juste après */
-    .dropdown,
-    .dropdown-toggle {
-      order: 2;               /* juste après la nav */
-      display: block !important;
-      width: 100% !important;
-      text-align: center;
-      margin: 0.25rem 0;
-    }
-    .dropdown-menu {
-      position: static !important;
-      width: 100% !important;
-      box-shadow: none !important;
-      margin-top: 0 !important;
-    }
-  
-    /* 5) Le bouton logout en dernier */
-    form[action="{{ route('logout') }}"] {
-      order: 3;
-    }
-    .logout-btn {
-      display: block !important;
-      width: 100% !important;
-      text-align: center;
-      padding: 0.75rem 0 !important;
-    }
-  }
-  
- 
-/* ===============================
-   Stylisation pour posts.show
-   =============================== */
+a {
+  text-decoration: none;
+  color: var(--primary-red);
+}
 
-/* Titres et marges */
-.text-2xl {
-    font-size: 1.5rem;      /* équivalent text-2xl */
-    line-height: 2rem;
-  }
-  .font-bold {
-    font-weight: 700;
-  }
-  .mb-2 { margin-bottom: 0.5rem; }
-  .mb-4 { margin-bottom: 1rem; }
-  
-  /* Texte de catégorie */
-  .text-gray-600 {
-    color: #718096;
-  }
-  
-  /* Contenu formaté */
-  .prose {
-    max-width: 65ch;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.75;
-    color: #2d3748;
-  }
-  
-  /* Espacement pour le bloc d’actions */
-  .mt-6 { margin-top: 1.5rem; }
-  
-  /* Boutons */
-  .bg-yellow-500 { background-color: #ecc94b; }
-  .hover\:bg-yellow-700:hover { background-color: #b7791f; }
-  .bg-red-500 { background-color: #f56565; }
-  .hover\:bg-red-700:hover { background-color: #c53030; }
-  .text-white { color: #ffffff; }
-  .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-  .px-4 { padding-left: 1rem; padding-right: 1rem; }
-  .rounded { border-radius: 0.25rem; }
-  .mr-2 { margin-right: 0.5rem; }
-  
-  /* Liens de retour */
-  .inline-block { display: inline-block; }
-  .ml-4 { margin-left: 1rem; }
-  .text-blue-600 { color: #3182ce; }
-  .hover\:underline:hover { text-decoration: underline; }
-/* ==============================
-   Styles enrichis pour posts.show
-   ============================== */
+a:hover {
+  text-decoration: underline;
+}
 
-/* Card wrapper */
+/* ======================
+   NAVIGATION
+========================= */
+nav {
+  background-color: var(--primary-red);
+  padding: 1rem;
+  color: var(--light-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--light-bg);
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--dark-bg);
+}
+
+/* ======================
+   BOUTONS GÉNÉRAUX
+========================= */
+.button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.button.red {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+}
+
+.button.red:hover {
+  background-color: var(--primary-red-hover);
+}
+
+/* ======================
+   NEWS DASHBOARD
+========================= */
+.dashboard-news {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.news-item {
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-item h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--primary-red);
+}
+
+.news-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-text);
+}
+
+/* ======================
+   POST DETAIL (posts.show)
+========================= */
 .post-show {
-    background: #ffffff;
-    border-radius: 0.75rem;              /* coins arrondis plus larges */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06); /* ombre douce et profonde */
-    padding: 2rem;                       /* plus de respiration */
-    margin: 2rem auto;                   /* espacement vertical */
-    max-width: 800px;                    /* lecture confortable */
-  }
-  
-  /* Titre principal */
-  .post-show .text-2xl {
-    font-size: 2.25rem;                  /* 36px */
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-    color: #1a202c;                      /* gris sombre */
-    text-transform: capitalize;
-    letter-spacing: -0.5px;
-  }
-  
-  /* Badge catégorie */
-  .post-show .text-gray-600 {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Contenu (prose) */
-  .post-show .prose {
-    max-width: 100%;
-    margin-bottom: 2rem;
-    font-family: Georgia, serif;         /* serif pour la lecture */
-    font-size: 1.0625rem;                /* 17px */
-    line-height: 1.8;
-    color: #2d3748;
-  }
-  
-  /* Première lettre (drop cap) */
-  .post-show .prose p:first-of-type::first-letter {
-    float: left;
-    font-size: 3rem;
-    line-height: 1;
-    padding-right: 0.25rem;
-    font-weight: bold;
-    color: #764ba2;
-  }
-  
-  /* Boutons d’action */
-  .post-show .mt-6 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-  }
-  .post-show .bg-yellow-500,
-  .post-show .bg-red-500 {
-    flex-shrink: 0;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.375rem;
-    font-size: 0.975rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .post-show .bg-yellow-500:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(230,174,54,0.3);
-  }
-  .post-show .bg-red-500:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(245,101,101,0.3);
-  }
-  
-  /* Lien retour */
-  .post-show .inline-block {
-    margin-left: auto;
-    color: #667eea;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .post-show .inline-block:hover {
-    color: #5a67d8;
-  }
-  
-  /* Mode sombre */
-  @media (prefers-color-scheme: dark) {
-    .post-show {
-      background: #2d3748;
-    }
-    .post-show .text-2xl {
-      color: #e2e8f0;
-    }
-    .post-show .text-gray-600 {
-      background: linear-gradient(135deg, #9f7aea 0%, #6b46c1 100%);
-    }
-    .post-show .prose {
-      color: #cbd5e0;
-    }
-    .post-show .prose p:first-of-type::first-letter {
-      color: #9f7aea;
-    }
-  }
-      
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.post-show h1 {
+  font-size: 2rem;
+  color: var(--primary-red);
+}
+
+.post-show .meta {
+  color: var(--gray-text);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.post-show .content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* ======================
+   LOGOUT BOUTON
+========================= */
+.logout {
+  text-align: right;
+  padding: 1rem;
+}
+
+.logout .button {
+  background-color: var(--dark-bg);
+  color: var(--light-bg);
+  border: 2px solid var(--primary-red);
+}
+
+.logout .button:hover {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+/* ======================
+   ANIMATION DOUCE
+========================= */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================
+   DARK MODE (optionnel)
+========================= */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.dark-mode .news-item,
+.dark-mode .post-show {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.dark-mode .news-item h2,
+.dark-mode .post-show h1 {
+  color: var(--primary-red);
+}
