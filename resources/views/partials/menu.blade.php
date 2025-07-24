@@ -1,5 +1,4 @@
 {{-- resources/views/partials/menu.blade.php --}}
-<link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 <nav class="bg-gray-800">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
