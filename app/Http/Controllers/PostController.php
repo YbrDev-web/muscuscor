@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /** Display a listing of the posts. */
     public function index()
     {
         // 1️⃣ On crée bien la variable $posts AVANT d’appeler view()
@@ -20,14 +19,12 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-    /** Show the form for creating a new post. */
     public function create()
     {
         $categories = Category::all();
         return view('posts.create', compact('categories'));
     }
 
-    /** Store a newly created post in storage. */
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -47,13 +44,11 @@ class PostController extends Controller
     }
     
 
-    /** Display the specified post. */
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
     }
 
-    /** Show the form for editing the specified post. */
     public function edit(Post $post)
     {
         $categories = Category::all();
@@ -63,7 +58,6 @@ class PostController extends Controller
         ]);    
     }
 
-    /** Update the specified post in storage. */
     public function update(Request $request, Post $post)
     {
         $data = $request->validate([
@@ -78,7 +72,6 @@ class PostController extends Controller
             ->with('success', 'Article mis à jour.');
     }
 
-    /** Remove the specified post from storage. */
     public function destroy(Post $post)
     {
         $post->delete();
